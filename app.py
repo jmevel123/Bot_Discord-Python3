@@ -27,13 +27,16 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
     
     if message.content.startswith('comment va ?'):
-        msg = 'Super merci bien ! et toi ?:)'.format(message)
+        msg = ' {0.author.mention} Super merci bien ! et toi ?:)'.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith('salut'):
-        msg = 'Yoooo'.format(message)
+        msg = 'Yoooo{0.author.mention} '.format(message)
         await client.send_message(message.channel, msg)
     if message.content.startswith('Salut'):
-        msg = 'Yoooo'.format(message)
+        msg = 'Yoooo {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)
+    if message.content.startswith('help'):
+        msg = ' {0.author.mention} Here is the command list:\n -hello \n -salut \n -fuck you'.format(message)
         await client.send_message(message.channel, msg)
 
     
