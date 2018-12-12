@@ -29,6 +29,13 @@ async def on_message(message):
     if message.content.startswith('comment va ?'):
         msg = 'Super merci bien ! et toi ?:)'.format(message)
         await client.send_message(message.channel, msg)
+    if message.content.startswith('salut'):
+        msg = 'Yoooo'.format(message)
+        await client.send_message(message.channel, msg)
+    if message.content.startswith('Salut'):
+        msg = 'Yoooo'.format(message)
+        await client.send_message(message.channel, msg)
+
     
 
 @client.event
