@@ -11,32 +11,25 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('hello'):
+    if message.content.startswith('!hello'):
         msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
     
-    if message.content.startswith('Hello'):
+    if message.content.startswith('!Hello'):
         msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
-
-    if message.content.startswith('Fuck you'):
-        msg = 'Yes I will {0.author.mention}, and you sister too'.format(message)
-        await client.send_message(message.channel, msg)
-    if message.content.startswith('fuck you'):
-        msg = 'Yes I will {0.author.mention}, and you sister too'.format(message)
-        await client.send_message(message.channel, msg)
     
-    if message.content.startswith('comment va ?'):
+    if message.content.startswith('!comment va ?'):
         msg = ' {0.author.mention} Super merci bien ! et toi ?:)'.format(message)
         await client.send_message(message.channel, msg)
-    if message.content.startswith('salut'):
+    if message.content.startswith('!salut'):
         msg = 'Yoooo{0.author.mention} '.format(message)
         await client.send_message(message.channel, msg)
-    if message.content.startswith('Salut'):
+    if message.content.startswith('!Salut'):
         msg = 'Yoooo {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
-    if message.content.startswith('help'):
-        msg = ' {0.author.mention} Here is the command list:\n -hello \n -salut \n -fuck you'.format(message)
+    if message.content.startswith('!help'):
+        msg = ' {0.author.mention} Here is the command list:\n -hello \n -salut \n -comment va ?'.format(message)
         await client.send_message(message.channel, msg)
 
     
